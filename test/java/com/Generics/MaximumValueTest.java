@@ -4,59 +4,57 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MaximumValueTest {
-	MaximumValue max = new MaximumValue();
-
 	@Test
 	public void givenThreeNumber_WhenIntegerNumber_ShouldReturnMaxAtFirstPosition() {
-		int value = max.findMax(9, 5, 6);
+		int value = new MaximumValue<Integer>(9, 5, 4).findMax();
 		Assert.assertEquals(9, value);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenIntegerNumber_ShouldReturnMaxAtSecondPosition() {
-		int value = max.findMax(5, 9, 6);
+		int value = new MaximumValue<Integer>(5, 9, 6).findMax();
 		Assert.assertEquals(9, value);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenIntegerNumber_ShouldReturnMaxAtThirdPosition() {
-		int value = max.findMax(6, 5, 9);
+		int value = new MaximumValue<Integer>(6, 5, 9).findMax();
 		Assert.assertEquals(9, value);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenFloatNumber_ShouldReturnMaxAtFirstPosition() {
-		float value = max.findMax(9.0f, 5.0f, 6.0f);
+		float value = new MaximumValue<Float>(9.0f, 5.0f, 6.0f).findMax();
 		Assert.assertEquals(9.0f, value, 0.0f);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenFloatNumber_ShouldReturnMaxSecoundPosition() {
-		float value = max.findMax(5.0f, 9.0f, 6.0f);
+		float value = new MaximumValue<Float>(5.0f, 9.0f, 6.0f).findMax();
 		Assert.assertEquals(9.0f, value, 0.0f);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenFloatNumber_ShouldReturnMaxThirdPosition() {
-		float value = max.findMax(9.0f, 5.0f, 11.0f);
+		float value = new MaximumValue<Float>(9.0f, 5.0f, 11.0f).findMax();
 		Assert.assertEquals(11.0f, value, 0.0f);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenStringValue_ShouldReturnMaxAtFirstPosition() {
-		String value = max.findMax("peach", "apple", "banana");
+		String value = new MaximumValue<String>("peach", "apple", "banana").findMax();
 		Assert.assertEquals("peach", value);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenStringValue_ShouldReturnMaxAtSecoundPosition() {
-		String value = max.findMax("apple", "peach", "banana");
+		String value = new MaximumValue<String>("apple", "peach", "banana").findMax();
 		Assert.assertEquals("peach", value);
 	}
 
 	@Test
 	public void givenThreeNumber_WhenStringValue_ShouldReturnMaxAtThirdPosition() {
-		String value = max.findMax("apple", "banana", "peach");
+		String value = new MaximumValue<String>("apple", "banana", "peach").findMax();
 		Assert.assertEquals("peach", value);
 	}
 
