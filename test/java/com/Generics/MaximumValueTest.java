@@ -3,7 +3,7 @@ package com.Generics;
 import org.junit.Assert;
 import org.junit.Test;
 
-class MaximumValueTestCase {
+public class MaximumValueTest{
 
 	// Integer type User input value and find maximum value at first position
 	@Test

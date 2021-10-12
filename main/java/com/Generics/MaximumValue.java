@@ -15,11 +15,17 @@ public class MaximumValue<T extends Comparable<T>> {
 			if (t.compareTo(max) > 0)
 				max = t;
 		}
-		System.out.println("Maximum value is " + max);
+		printMax(max); //calling printMax method
 		return max;
+
 	}
 
 	public T findMax() {
 		return MaximumValue.testMaximum(values);
+	}
+
+	// method to print the maximum value
+	public static <E> void printMax(E e) {
+		System.out.println(" Maximum Value is" + e);
 	}
 }
